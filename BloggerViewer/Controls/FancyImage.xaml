@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="BloggerViewer.Controls.FancyImage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BloggerViewer.Controls"
+             mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <DockPanel x:Name="pnlLoading" MinHeight="50" MinWidth="50">
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Loading" />
+            </Border>
+        </DockPanel>
+        <Image x:Name="imgDisplay" Visibility="Collapsed" MaxHeight="500" />
+    </Grid>
+</UserControl>

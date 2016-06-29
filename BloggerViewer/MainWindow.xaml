@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BloggerViewer"
         xmlns:utils="clr-namespace:BloggerViewer.Utils"
+        xmlns:ctls="clr-namespace:BloggerViewer.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Loaded="Window_Loaded">
     <Grid>
@@ -13,7 +14,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Column="0" ItemsSource="{Binding Posts}" x:Name="lbPosts">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Posts}" x:Name="lbPosts" Width="400" ScrollViewer.CanContentScroll="False" 
+                 HorizontalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.Resources>
                 <utils:PostToListItemConverter x:Key="PostToListItemConverter" />
             </ListBox.Resources>
@@ -33,7 +35,7 @@
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding}"/>
+                    <ctls:FancyImage Source="{Binding}"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

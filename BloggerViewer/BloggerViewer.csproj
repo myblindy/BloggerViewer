@@ -99,8 +99,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\FancyImage.xaml.cs">
+      <DependentUpon>FancyImage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\BloggerWrapper.cs" />
     <Compile Include="Utils\ValueConverters.cs" />
+    <Page Include="Controls\FancyImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
